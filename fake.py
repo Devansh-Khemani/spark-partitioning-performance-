@@ -11,7 +11,7 @@ fake = Faker()
 total_rows = 10000000
 batch_size = 100_000
 num_batches = total_rows // batch_size
-gcs_output_path = "gs://spark-blog-test/fake-data-spark/"
+gcs_output_path = "gs://<your-bucket-name>/fake-data-spark/"
 
 for batch_num in range(num_batches):
     data = [{
