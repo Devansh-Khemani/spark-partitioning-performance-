@@ -5,8 +5,8 @@ from pyspark.sql.functions import hash
 spark = SparkSession.builder.appName("Deterministic1PercentFilter").getOrCreate()
 
 # Paths
-input_path = "gs://spark-blog-test/fake-data-spark/"
-output_path = "gs://spark-blog-test/fake-data-spark-1percent/"
+input_path = "gs://<your-bucket-name>/fake-data-spark/"
+output_path = "gs://<your-bucket-name>/fake-data-spark-1percent/"
 
 # Read full dataset
 df = spark.read.parquet(input_path)
